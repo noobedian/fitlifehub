@@ -1,0 +1,158 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0066cc;
+    padding: 10px 20px;
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.brand-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-menu a.active {
+    background-color: white;
+    color: #0066cc;
+    border-radius: 5px;
+}
+
+.nav-menu a:hover {
+    background-color: white;
+    color: #0066cc;
+    border-radius: 5px;
+}
+
+.profile-icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Workouts Page Content */
+.workouts-container {
+    display: flex;
+    justify-content: space-between; /* Spread the boxes across the screen */
+    align-items: stretch; /* Make each box stretch from top to bottom */
+    height: calc(100vh - 60px); /* Full viewport height minus navbar height */
+    margin-top: 60px; /* Adjust for navbar height */
+    padding-bottom: 60px; /* Allow space for the footer */
+    position: relative;
+}
+
+/* Workout Boxes */
+.workout-box {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align content to the bottom */
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: absolute;
+    text-decoration: none; /* Remove underline for links */
+    overflow: hidden; /* Hide overflow to ensure the image fits perfectly */
+    color: white; /* Default text color for contrast over images */
+}
+
+/* Adjust positions for each box */
+.workout-box.strength {
+    width: 29%; /* Adjust width as needed */
+    height: 80%; /* Adjust height as needed */
+    top: 10%; /* Adjust vertical position */
+    left: 5%; /* Adjust horizontal position */
+}
+
+.workout-box.cardio {
+    width: 29%; /* Adjust width as needed */
+    height: 80%; /* Adjust height as needed */
+    top: 10%; /* Adjust vertical position */
+    left: 35%; /* Adjust horizontal position */
+}
+
+.workout-box.beginners {
+    width: 30%; /* Adjust width as needed */
+    height: 80%; /* Adjust height as needed */
+    top: 10%; /* Adjust vertical position */
+    left: 65%; /* Adjust horizontal position */
+}
+
+/* Image styling for each section */
+.workout-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire box */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.workout-box h2,
+.workout-box p {
+    position: relative; /* Relative positioning to appear above the image */
+    z-index: 1; /* Ensure text stays above the image */
+    color: white; /* Ensure text is readable over the image */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
+}
+
+
+.workout-box p {
+    font-size: 16px; /* Customize the font size */
+    color: #ffffff;
+    line-height: 1.6; /* Adjust line height for better readability */
+}
+
+.workout-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0066cc;
+    color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}

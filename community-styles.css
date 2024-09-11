@@ -1,0 +1,229 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0066cc;
+    padding: 10px 20px;
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.brand-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-menu a.active {
+    background-color: white;
+    color: #0066cc;
+    border-radius: 5px;
+}
+
+.nav-menu a:hover {
+    background-color: white;
+    color: #0066cc;
+    border-radius: 5px;
+}
+
+.profile-icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Community Page Content */
+.community-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Define the column structure */
+    grid-template-rows: auto auto; /* Define the row structure */
+    gap: 20px; /* Add spacing between the grid items */
+    padding: 80px 20px;
+}
+
+/* Left Section - Success Stories */
+.left-section {
+    grid-column: 1;
+    grid-row: 1 / span 1; /* Make it span two rows */
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Full height */
+}
+
+.scrollable-content {
+    max-height: 300px; /* Set a max height for the scrolling content */
+    overflow-y: auto; /* Add scrolling */
+}
+
+.scrollable-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.scrollable-content li {
+    padding: 10px 0; /* Add padding for space between links */
+    border-bottom: 1px solid #ddd; /* Separator line between links */
+    margin-bottom: 5px; /* Additional space below each link */
+}
+
+.scrollable-content li:last-child {
+    border-bottom: none; /* Remove the separator line for the last item */
+}
+
+/* Middle Top Section - Tip of the Day */
+.middle-top-section {
+    grid-column: 2;
+    grid-row: 1/ span 1;
+    height: auto; /* Adjust height automatically */
+}
+
+.image-container {
+    position: fixed;
+    width: 47%;
+    height: 39%; /* Adjust height as needed */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 2.0);
+}
+
+/* Middle Bottom Section - Beginners Doubts */
+.middle-bottom-section {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.interaction-buttons {
+    margin-top: 10px;
+}
+
+.interaction-buttons button {
+    margin-right: 5px;
+}
+
+/* Right Section - Motivation of the Day */
+.right-section {
+    grid-column: 3;
+    grid-row: 1 / span 2; /* Make it span two rows */
+}
+
+.right-section .image-container {
+    position: relative;
+    width: 100%;
+    height: 700px; /* Adjust height as needed */
+}
+
+.right-section .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Beginners Doubts Container */
+.beginners-doubts-container {
+    width: 302%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.beginners-doubts-container h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Doubt Entry */
+.doubt {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd; /* Separator line between doubts */
+    margin-bottom: 10px;
+}
+
+.doubt:last-child {
+    border-bottom: none; /* Remove the separator line for the last item */
+}
+
+.commenter-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0066cc;
+    margin-bottom: 5px;
+}
+
+.comment-text {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0066cc;
+    color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,146 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0066cc;
+    padding: 10px 20px;
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.brand-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-menu a.active {
+    background-color: white;
+    color: #0066cc;
+    border-radius: 5px;
+}
+
+.nav-menu a:hover {
+    background-color: white;
+    color: #0066cc;
+    border-radius: 5px;
+}
+
+.profile-icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Home Page Content */
+.home-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns for six boxes */
+    gap: 20px; /* Space between the boxes */
+    padding: 100px 20px; /* Padding to prevent overlap with navbar */
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section boxes with background images */
+.section-box {
+    width: 320px; /* Adjusted width for larger size */
+    height: 320px; /* Adjusted height to match width for square shape */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden; /* Ensure content does not overflow */
+    position: relative; /* Position for absolute overlay text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: flex-end; /* Align text to the bottom */
+    justify-content: center;
+}
+
+/* Overlay text styling */
+.overlay-text {
+    position: absolute; /* Position over the image */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white;
+    text-align: center;
+}
+
+.overlay-text h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.overlay-text p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Hover effect for section boxes */
+.clickable-box:hover .section-box {
+    transform: scale(1.02); /* Slightly scale up on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Responsive adjustments for different screen sizes */
+@media (max-width: 768px) {
+    .home-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .home-container {
+        grid-template-columns: repeat(1, 1fr); /* One column for very small screens */
+    }
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0066cc;
+    color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
